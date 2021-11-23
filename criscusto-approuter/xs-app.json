@@ -1,0 +1,13 @@
+{
+  "authenticationMethod": "none",
+  "routes": [
+    {
+        "source": "^/Northwind/(.*)$",
+        "target": "/Northwind/$1",
+        "destination": "Northwind",
+        "authenticationType": "xsuaa",
+        "csrfProtection": false,
+        "httpMethods": ["GET", "POST"]
+    }],
+  "welcomeFile": "/comcriscustocriscustoapp"
+}

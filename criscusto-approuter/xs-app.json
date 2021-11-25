@@ -8,6 +8,13 @@
         "authenticationType": "xsuaa",
         "csrfProtection": false,
         "httpMethods": ["GET", "POST"]
+    },{
+        "source": "^/getuserinfo/(.*)$",
+        "target": "/getuserinfo/$1",
+        "destination": "getuserinfo",
+        "authenticationType": "xsuaa",
+        "csrfProtection": false,
+        "httpMethods": ["GET", "POST"]
     }],
   "welcomeFile": "/comcriscustocriscustoapp"
 }

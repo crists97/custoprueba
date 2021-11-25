@@ -8,7 +8,10 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					                    <content ><VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+		<Text id="_IDGenText1" text="{userInfo>/email}" />
+	</VBox>
+                    </content>
 				</Page>
 			</pages>
 		</App>

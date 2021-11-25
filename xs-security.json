@@ -1,20 +1,53 @@
 {
-  "xsappname": "criscusto",
-  "tenant-mode": "dedicated",
-  "description": "Security profile of called application",
-  "scopes": [
-    {
-      "name": "uaa.user",
-      "description": "UAA"
-    }
-  ],
-  "role-templates": [
-    {
-      "name": "Token_Exchange",
-      "description": "UAA",
-      "scope-references": [
-        "uaa.user"
-      ]
-    }
-  ]
+    "xsappname": "criscusto",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+        {
+            "name": "uaa.user",
+            "description": "UAA"
+        },
+        {
+            "name": "$XSAPPNAME.Display",
+            "description": "display"
+        },
+        {
+            "name": "$XSAPPNAME.Edit",
+            "description": "edit"
+        },
+        {
+            "name": "$XSAPPNAME.Delete",
+            "description": "delete"
+        },
+        {
+            "name": "$XSAPPNAME.DataGenerator",
+            "description": "data generator"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Token_Exchange",
+            "description": "UAA",
+            "scope-references": [
+                "uaa.user"
+            ]
+        },
+        {
+            "name": "shine_admin",
+            "description": "refapps administrator",
+            "scope-references": [
+                "$XSAPPNAME.Display",
+                "$XSAPPNAME.Edit",
+                "$XSAPPNAME.Delete",
+                "$XSAPPNAME.DataGenerator"
+            ]
+        },
+        {
+            "name": "cris_ejemplo",
+            "description": "nuevo ejemplo lectura",
+            "scope-references": [
+                "$XSAPPNAME.Display"
+            ]
+        }
+    ]
 }

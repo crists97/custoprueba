@@ -52,6 +52,15 @@ sap.ui.define(
                 return oData.value;
               });
           },
+
+          getUserInfo: function () {
+            var oUserDataInfo = ConfigHelper.getInstance().getCallData("UserInfo", "getUserInfo");
+            return AjaxCaller.getInstance()
+              .requestAjax(oUserDataInfo.method, oUserDataInfo.url)
+              .then(function (oData) {
+                return oData;
+              });
+          }
         }
       );
   

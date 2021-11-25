@@ -11,7 +11,8 @@
 		"@sap/html5-repo-mock": "2.1.0"
 	},
 	"scripts": {
-		"start": "node node_modules/@sap/approuter/approuter.js",
+		"start-origin": "node node_modules/@sap/approuter/approuter.js",
+		"start": "node ./approuter-start.js",
 		"start-local": "node node_modules/@sap/html5-repo-mock/index.js"
 	}
 }
